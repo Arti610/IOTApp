@@ -1,0 +1,27 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "admin1",
+        "password": "adminpassword",
+        "role": "admin",
+        "accessToken": "your_access_token_here",
+        "refreshToken": "your_refresh_token_here",
+        "firstName": "Admin",
+        "lastName": "One",
+        "email": "admin1@example.com"
+      },
+      {
+        "id": 2,
+        "username": "user1",
+        "password": "userpassword",
+        "role": "user",
+        "accessToken": "your_access_token_here",
+        "refreshToken": "your_refresh_token_here",
+        "firstName": "User",
+        "lastName": "One",
+        "email": "user1@example.com"
+      }
+    ]
+  }
+  

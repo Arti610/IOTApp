@@ -77,3 +77,16 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+
+
+
+# Add permissions at  ```android\app\src\main\AndroidManifest.xml```
+# Added JSON server for temparery api
+# for navigation(Routing) ```npm install @react-navigation/native```
+1. Drawer ```npm install @react-navigation/drawer```
+2.  tab
+   - Bottom tab ```npm install @react-navigation/bottom-tabs```
+   - Top tab ```npm install createMaterialTopTabNavigator```
+3. stack ```npm install @react-navigation/stack```
+
