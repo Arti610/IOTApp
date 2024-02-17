@@ -5,7 +5,7 @@ const SubHeading = ({Subheading,fs,color,}) => {
     const styles=StyleSheet.create({
        Subheading:{
         color:color?color:"#000",
-        fontSize:fs?fs:10,
+        fontSize:fs?fs:14,
        }
         })
 

@@ -1,7 +1,10 @@
 import { View, Text, TextInput,StyleSheet } from 'react-native'
 import React from 'react'
 
-const Input = ({placeholder,value,handleOnchange}) => {
+const Input = ({name,placeholder,handleOnchange,handleBlur,values,touched,errors}) => {
+  // console.log("name",name);
+  // console.log("Values",values);
+  // console.log("handleOnchange",handleOnchange);
   const styles=StyleSheet.create({
     TextInputStyle:{
         borderWidth: 1,
@@ -13,12 +16,19 @@ const Input = ({placeholder,value,handleOnchange}) => {
     }
   })
   return (
-    <TextInput
+   <View>
+     <TextInput
+     name={name}
     placeholder={placeholder}
-    value={value?value:""}
-    onChangeText={handleOnchange}
+    value={values?values:""}
+    onChangeText={handleOnchange(name)}
+    onBlur={handleBlur(name)}
     style={styles.TextInputStyle}    
     />
+    <Text>
+      {errors}
+    </Text>
+   </View>
   )
 }
 

@@ -5,8 +5,8 @@
         "username": "admin1",
         "password": "adminpassword",
         "role": "admin",
-        "accessToken": "your_access_token_here",
-        "refreshToken": "your_refresh_token_here",
+        "accessToken": "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6ImFkbWluMSIsImV4cCI6MTcyNzQ5ODk1NSwiaWF0IjoxNzA4MTQ1Mzg4fQ.Gu3eNtXTcROvim_8mmlLx8rAoBkpN7FZPc70EgHanws",
+        "refreshToken": "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6ImFkbWluMSIsImV4cCI6MTcyNzQ5ODk1NSwiaWF0IjoxNzA4MTQ1Mzg4fQ.Gu3eNtXTcROvim_8mmlLx8rAoBkpN7FZPc70EgHanws",
         "firstName": "Admin",
         "lastName": "One",
         "email": "admin1@example.com"
@@ -24,4 +24,5 @@
       }
     ]
   }
+  
   

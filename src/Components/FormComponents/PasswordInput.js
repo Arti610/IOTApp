@@ -1,27 +1,43 @@
-import { View, Text, TextInput,StyleSheet } from 'react-native'
-import React from 'react'
+import {View, Text, TextInput, StyleSheet} from 'react-native';
+import React from 'react';
 
-const PasswordInput = ({placeholder,value,handleOnchange}) => {
-  const styles=StyleSheet.create({
-    TextInputStyle:{
-        borderWidth: 1,
-        borderColor: '#D0D5DD',
-        padding: 10,
-        borderRadius: 8,
-        backgroundColor: '#FFF',
-        position: 'relative',
-    }
-  })
+const PasswordInput = ({
+  name,
+  placeholder,
+  handleOnchange,
+  handleBlur,
+  values,
+  touched,
+  errors,
+}) => {
+  // console.log("name",name);
+  // console.log("Values",values);
+  // console.log("handleOnchange",handleOnchange);
+
+  const styles = StyleSheet.create({
+    TextInputStyle: {
+      borderWidth: 1,
+      borderColor: '#D0D5DD',
+      padding: 10,
+      borderRadius: 8,
+      backgroundColor: '#FFF',
+      position: 'relative',
+    },
+  });
   return (
-    <TextInput
-    placeholder={placeholder}
-    value={value?value:""}
-    onChangeText={handleOnchange}
-    style={styles.TextInputStyle}
-    secureTextEntry
-    
-    />
-  )
-}
+    <View>
+      <TextInput
+        name={name}
+        placeholder={placeholder}
+        value={values ? values : ''}
+        onChangeText={handleOnchange(name)}
+        onBlur={handleBlur(name)}
+        style={styles.TextInputStyle}
+        secureTextEntry
+      />
+      <Text> {errors}</Text>
+    </View>
+  );
+};
 
-export default PasswordInput
+export default PasswordInput;
