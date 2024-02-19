@@ -8,18 +8,41 @@ const apiService = axios.create({
   baseURL: API_CONFIG.baseURL,
 });
 
-// Set up request interceptor
-apiService.interceptors.request.use(async config => {
-  try {
-    const token = await AsyncStorage.getItem('token');
-   
+apiService.interceptors.request.use(
+  (config) => {
+    const token = AsyncStorage.getItem('token');
     if (token !== null) {
-      config.headers['Authorization'] = `token ${token}`;
+      config.headers["Authorization"] = `bearer ${token}`;
     }
     return config;
-  } catch (error) {
-    throw error;
+  },
+  (error) => {
+    return Promise.reject(error);
   }
-});
+);
+
+// Set up response interceptor
+apiService.interceptors.response.use(
+  (response) => {
+    // Do something with response data
+    // console.log(response);
+    return response;
+  },
+  (error) => {
+    // Do something with response error
+    // console.log(error);
+    if (!error.response) {
+      // handle error
+    } else if (error.response.status === 403) {
+      // handle error
+    } else if (error.response.status === 401) {
+      // handle error
+    } else {
+      // handle error
+    }
+    return Promise.reject(error);
+  }
+);
+
 
 export default apiService;
