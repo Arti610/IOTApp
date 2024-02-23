@@ -16,7 +16,7 @@ const Base = () => {
     }
 
     return (
-        // <DrawerNavigation>
+
         <View>
             <Text>Base</Text>
             <Button
@@ -24,7 +24,7 @@ const Base = () => {
                 title={"logout"}
             />
         </View>
-        // </DrawerNavigation>
+
     )
 }
 
